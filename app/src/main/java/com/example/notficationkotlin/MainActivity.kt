@@ -28,8 +28,8 @@ class MainActivity : AppCompatActivity() {
         notification.setContentTitle("Manadate create for NextBillionTechnology")
         notification.setAutoCancel(true)
         notification.setPriority(NotificationCompat.PRIORITY_MAX)
-        var intent:Intent= Intent(this,MainActivity::class.java)
-        var pi:PendingIntent = PendingIntent.getActivity(this,0,intent,0)
+        var intent= Intent(this,MainActivity::class.java)
+        var pi= PendingIntent.getActivity(this,0,intent,0)
         notification.setContentIntent(pi)
         val nmanager=getSystemService(NOTIFICATION_SERVICE) as NotificationManager
         nmanager.notify(101,notification.build())
